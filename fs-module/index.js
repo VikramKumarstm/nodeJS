@@ -66,12 +66,23 @@ const fs = require('fs');
 
 // Deleting Files
 // Asynchronous Deletion
-fs.unlink('output.txt', (err) => {
-    if (err) {
-        console.error("ERROR in deleting", err);
-        return;
+// fs.unlink('output.txt', (err) => {
+//     if (err) {
+//         console.error("ERROR in deleting", err);
+//         return;
         
-    }
-    console.log("file deleted successfully");
+//     }
+//     console.log("file deleted successfully");
     
-})
+// })
+
+// synchronous Deletion
+try {
+    fs.unlinkSync('syncOutput.txt')
+    console.log("File deleted successfully.");
+    
+} catch (error) {
+    console.error(error);
+    
+}
+
