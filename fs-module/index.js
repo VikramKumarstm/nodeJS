@@ -24,11 +24,21 @@ const fs = require('fs');
 // }
 
 // Asynchronous Writing File
-fs.writeFile('output.txt', 'Some temp text', (err) => {
-    if (err) {
-        console.error('Error writing file:', err);
-    }
-    console.log("File written successfully.");
-})
+// fs.writeFile('output.txt', 'Some temp text', (err) => {
+//     if (err) {
+//         console.error('Error writing file:', err);
+//     }
+//     console.log("File written successfully.");
+// })
 
+
+// synchronous Writing File
+try {
+    fs.writeFileSync('syncOutput.txt', 'Hello!');
+    console.log('File written successfully.');
+    
+} catch (error) {
+    console.error('Error writing file:', error);
+    
+}
 
