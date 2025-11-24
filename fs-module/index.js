@@ -45,12 +45,21 @@ const fs = require('fs');
 // Appending to Files
 // Asynchronous Appending
 
-fs.appendFile('output.txt', "\n Added something", (err) => {
-    if (err) {
-        console.error("Error :", err);
+// fs.appendFile('output.txt', "\n Added something", (err) => {
+//     if (err) {
+//         console.error("Error :", err);
         
-    }
-    console.log("content added successfully.");
+//     }
+//     console.log("content added successfully.");
     
-})
+// })
 
+// synchronous Appending
+try {
+    fs.appendFileSync('output.txt', '..added something new')
+    console.log("content added sucessfully.");
+    
+} catch (error) {
+    console.error(error);
+    
+}
