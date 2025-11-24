@@ -55,11 +55,23 @@ const fs = require('fs');
 // })
 
 // synchronous Appending
-try {
-    fs.appendFileSync('output.txt', '..added something new')
-    console.log("content added sucessfully.");
+// try {
+//     fs.appendFileSync('output.txt', '..added something new')
+//     console.log("content added sucessfully.");
     
-} catch (error) {
-    console.error(error);
+// } catch (error) {
+//     console.error(error);
     
-}
+// }
+
+// Deleting Files
+// Asynchronous Deletion
+fs.unlink('output.txt', (err) => {
+    if (err) {
+        console.error("ERROR in deleting", err);
+        return;
+        
+    }
+    console.log("file deleted successfully");
+    
+})
