@@ -1,5 +1,4 @@
 const http = require('http');
-const { json } = require('stream/consumers');
 
 const PORT = 8000
 
